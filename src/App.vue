@@ -18,7 +18,9 @@
 }
 
 #nav {
+  position: sticky;
   padding: 30px;
+  z-index: 999;
 }
 
 #nav a {
