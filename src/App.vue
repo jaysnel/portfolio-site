@@ -1,8 +1,14 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/"><font-awesome-icon icon="home" />Home</router-link>
-      <router-link to="/about"><font-awesome-icon icon="user" />About</router-link>
+      <router-link to="/" class="nav-home nav-item">
+      <span class="link-icon"><font-awesome-icon icon="home" /></span>
+      <span class="link-text">Home</span>
+      </router-link>
+      <router-link to="/about" class="nav-about nav-item">
+      <span class="link-icon"><font-awesome-icon icon="user" /></span>
+      <span class="link-text">About</span>
+      </router-link>
     </div>
     <router-view/>
     <vue-particles 

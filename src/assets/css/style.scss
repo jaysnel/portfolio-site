@@ -45,7 +45,25 @@ body {
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: $color3;
+}
+
+.nav-item {
+  .link-icon {
+    opacity: 1;
+  }
+  .link-text {
+    opacity: 0;
+  }
+
+  &:hover {
+    .link-icon {
+      opacity: 0;
+    }
+    .link-text {
+      opacity: 1;
+    }
+  }
 }
 
 #particles-js {
