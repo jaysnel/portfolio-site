@@ -14,7 +14,7 @@
     <vue-particles 
         color="#dedede"
         :particleOpacity="1"
-        :particlesNumber="300"
+        :particlesNumber="50"
         shapeType="circle"
         :particleSize="4"
         linesColor="#dedede"

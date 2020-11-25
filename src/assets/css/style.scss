@@ -4,6 +4,14 @@ $color3: #52796f;
 $color4: #354f52;
 $color5: #2f3e46;
 $darkcolor: #181818;
+$white: #fff;
+$black: #000;
+
+@mixin for-mobile-only {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
 
 @mixin for-desktop-only {
   @media (min-width: 768px) {
@@ -14,10 +22,6 @@ $darkcolor: #181818;
 //Main Styles
 body {
   background-color: $color5;
-}
-
-#app {
-  text-align: center;
 }
 
 #nav {
@@ -74,4 +78,78 @@ body {
   width: 100%;
   height: 100%;
   z-index: -999;
+}
+
+.home {
+  .HomeHero {
+    @include for-desktop-only {
+      width: 500px;
+      margin-left: 105px;
+      margin-top: 15%;
+    }
+
+    @include for-mobile-only {
+      max-width: 100%;
+      margin-left: 55px;
+      margin-top: 25%;
+    }
+
+    .title {
+      color: $white;
+
+      span {
+        @include for-desktop-only {
+          font-size: 53px;
+        }
+
+        display: inline-block;
+        font-size: 40px;
+        color: $white;
+        cursor: default;
+
+        &:hover {
+          color: $color3;
+          animation: rubberBand 1s;
+          transition: all ease-in-out;
+        }
+      }
+    }
+
+    .sub-title {
+      color: $color1;
+
+      margin-top: 5px;
+    }
+  }
+}
+
+//Animations
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
 }
