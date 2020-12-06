@@ -13,17 +13,27 @@ body {
 }
 @media (min-width: 768px) {
   body .home-page,
-body .about-page {
+body .about-page,
+body .skills-page,
+body .contact-page {
     margin-left: 100px;
     margin-top: 15%;
   }
 }
 @media (max-width: 768px) {
   body .home-page,
-body .about-page {
+body .about-page,
+body .skills-page,
+body .contact-page {
     margin-left: 55px;
     margin-top: 25%;
   }
+}
+body .home-title,
+body .about-title,
+body .skills-title,
+body .contact-title {
+  color: #fff;
 }
 body a:focus {
   outline: 0;
@@ -40,7 +50,7 @@ body a:focus {
     flex-direction: column;
     background-color: #181818;
     position: fixed;
-    width: 60px;
+    width: 80px;
     height: 100%;
     top: 0;
     left: 0;
@@ -92,9 +102,6 @@ body a:focus {
     max-width: 100%;
   }
 }
-.home-page .HomeHero .home-title {
-  color: #fff;
-}
 .home-page .HomeHero .home-title span {
   display: inline-block;
   font-size: 40px;
@@ -114,10 +121,6 @@ body a:focus {
 .home-page .HomeHero .sub-title {
   color: #cad2c5;
   margin-top: 5px;
-}
-
-.about-page .about-title {
-  color: #fff;
 }
 
 @keyframes rubberBand {

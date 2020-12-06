@@ -36,7 +36,9 @@ body {
   background-color: $color5;
 
   .home-page,
-  .about-page {
+  .about-page,
+  .skills-page,
+  .contact-page {
     @include for-desktop-only {
       margin-left: 100px;
       margin-top: 15%;
@@ -46,6 +48,13 @@ body {
       margin-left: 55px;
       margin-top: 25%;
     }
+  }
+
+  .home-title,
+  .about-title,
+  .skills-title,
+  .contact-title {
+    color: $white;
   }
 
   a:focus {
@@ -63,7 +72,7 @@ body {
     flex-direction: column;
     background-color: $darkcolor;
     position: fixed;
-    width: 60px;
+    width: 80px;
     height: 100%;
     top: 0;
     left: 0;
@@ -119,8 +128,6 @@ body {
     }
 
     .home-title {
-      color: $white;
-
       span {
         @include for-desktop-only {
           font-size: 53px;
@@ -148,9 +155,6 @@ body {
 }
 
 .about-page {
-  .about-title {
-    color: $white;
-  }
 }
 
 //Animations

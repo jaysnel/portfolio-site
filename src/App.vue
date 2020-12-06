@@ -9,6 +9,14 @@
       <span class="link-icon"><font-awesome-icon icon="user" /></span>
       <span class="link-text">About</span>
       </router-link>
+      <router-link to="/skills" class="nav-skills nav-item">
+      <span class="link-icon"><font-awesome-icon icon="tools" /></span>
+      <span class="link-text">Skills</span>
+      </router-link>
+      <router-link to="/contact" class="nav-contact nav-item">
+      <span class="link-icon"><font-awesome-icon icon="id-card" /></span>
+      <span class="link-text">Contact</span>
+      </router-link>
     </div>
     <router-view/>
     <vue-particles 
