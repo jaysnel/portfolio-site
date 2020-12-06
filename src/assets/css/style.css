@@ -12,27 +12,18 @@ body {
   background-color: #2f3e46;
 }
 @media (min-width: 768px) {
-  body .home-page,
-body .about-page,
-body .skills-page,
-body .contact-page {
+  body .page-body {
     margin-left: 100px;
     margin-top: 15%;
   }
 }
 @media (max-width: 768px) {
-  body .home-page,
-body .about-page,
-body .skills-page,
-body .contact-page {
+  body .page-body {
     margin-left: 55px;
     margin-top: 25%;
   }
 }
-body .home-title,
-body .about-title,
-body .skills-title,
-body .contact-title {
+body .page-title {
   color: #fff;
 }
 body a:focus {

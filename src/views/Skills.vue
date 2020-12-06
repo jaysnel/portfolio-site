@@ -1,5 +1,5 @@
 <template>
-  <div class="skills-page">
+  <div class="skills-page page-body">
       <Skills />
   </div>
 </template>

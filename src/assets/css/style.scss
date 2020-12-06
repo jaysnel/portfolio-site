@@ -35,10 +35,7 @@ $black: #000;
 body {
   background-color: $color5;
 
-  .home-page,
-  .about-page,
-  .skills-page,
-  .contact-page {
+  .page-body {
     @include for-desktop-only {
       margin-left: 100px;
       margin-top: 15%;
@@ -50,10 +47,7 @@ body {
     }
   }
 
-  .home-title,
-  .about-title,
-  .skills-title,
-  .contact-title {
+  .page-title {
     color: $white;
   }
 
