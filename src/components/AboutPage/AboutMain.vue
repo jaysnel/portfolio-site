@@ -9,7 +9,3 @@ export default {
 name: "AboutMain"
 }
 </script>
-
-<style>
-
-</style>
