@@ -1,6 +1,6 @@
 <template>
-  <div>
-      <h1>About Me</h1>
+  <div class="About-Hero">
+      <h1 class="page-title about-title">About Me</h1>
   </div>
 </template>
 

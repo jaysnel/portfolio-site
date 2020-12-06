@@ -1,5 +1,33 @@
+#particles-js {
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -999;
+}
+
 body {
   background-color: #2f3e46;
+}
+@media (min-width: 768px) {
+  body .home-page,
+body .about-page {
+    margin-left: 100px;
+    margin-top: 15%;
+  }
+}
+@media (max-width: 768px) {
+  body .home-page,
+body .about-page {
+    margin-left: 55px;
+    margin-top: 25%;
+  }
+}
+body a:focus {
+  outline: 0;
+  border: none;
 }
 
 #nav {
@@ -21,75 +49,75 @@ body {
     min-height: 500px;
   }
 }
-
 #nav a {
   font-weight: bold;
   color: #fff;
 }
-
+@media (min-width: 768px) {
+  #nav a {
+    font-size: 20px;
+  }
+}
 #nav a.router-link-exact-active {
   color: #52796f;
 }
-
-.nav-item .link-icon {
-  opacity: 1;
+#nav .nav-item {
+  text-align: center;
 }
-.nav-item .link-text {
-  opacity: 0;
+@media (min-width: 768px) {
+  #nav .nav-item {
+    margin: 15px 0;
+  }
 }
-.nav-item:hover .link-icon {
-  opacity: 0;
+#nav .nav-item .link-icon {
+  display: block;
 }
-.nav-item:hover .link-text {
-  opacity: 1;
+#nav .nav-item .link-text {
+  display: none;
 }
-
-#particles-js {
-  background-size: cover;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -999;
+#nav .nav-item:hover .link-icon {
+  display: none;
+}
+#nav .nav-item:hover .link-text {
+  display: block;
 }
 
 @media (min-width: 768px) {
-  .home .HomeHero {
+  .home-page .HomeHero {
     width: 500px;
-    margin-left: 105px;
-    margin-top: 15%;
   }
 }
 @media (max-width: 768px) {
-  .home .HomeHero {
+  .home-page .HomeHero {
     max-width: 100%;
-    margin-left: 55px;
-    margin-top: 25%;
   }
 }
-.home .HomeHero .title {
+.home-page .HomeHero .home-title {
   color: #fff;
 }
-.home .HomeHero .title span {
+.home-page .HomeHero .home-title span {
   display: inline-block;
   font-size: 40px;
   color: #fff;
   cursor: default;
 }
 @media (min-width: 768px) {
-  .home .HomeHero .title span {
+  .home-page .HomeHero .home-title span {
     font-size: 53px;
   }
 }
-.home .HomeHero .title span:hover {
+.home-page .HomeHero .home-title span:hover {
   color: #52796f;
   animation: rubberBand 1s;
   transition: all ease-in-out;
 }
-.home .HomeHero .sub-title {
+.home-page .HomeHero .sub-title {
   color: #cad2c5;
   margin-top: 5px;
+}
+
+.about-page .about-title {
+  color: #fff;
 }
 
 @keyframes rubberBand {
