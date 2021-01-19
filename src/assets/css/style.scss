@@ -34,16 +34,21 @@ $black: #000;
 //Main Styles
 body {
   background-color: $color5;
+  color: $white;
 
   .page-body {
+    max-width: 100%;
+    width: 500px;
+
+    padding-top: 15%;
+
     @include for-desktop-only {
       margin-left: 100px;
-      margin-top: 15%;
     }
 
     @include for-mobile-only {
-      margin-left: 55px;
-      margin-top: 25%;
+      margin: auto;
+      padding: 15px;
     }
   }
 
@@ -92,14 +97,14 @@ body {
     @include for-desktop-only {
       margin: 15px 0;
     }
-  
+
     .link-icon {
       display: block;
     }
     .link-text {
       display: none;
     }
-  
+
     &:hover {
       .link-icon {
         display: none;
@@ -129,7 +134,6 @@ body {
 
         display: inline-block;
         font-size: 40px;
-        color: $white;
         cursor: default;
 
         &:hover {
@@ -144,6 +148,43 @@ body {
       color: $color1;
 
       margin-top: 5px;
+    }
+  }
+}
+
+.about-page {
+  .about-me-description {
+    font-weight: bold;
+
+    @include for-mobile-only {
+      max-width: 100%;
+      width: 400px;
+    }
+  }
+
+  .about-me-social-icons {
+    max-width: 100%;
+    width: 500px;
+
+    span * {
+      &:hover {
+        color: $white;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .about-me-social-icons svg,
+  .about-me-social-icons a {
+    color: $color2;
+    margin-right: 25px;
+
+    @include for-desktop-only {
+      font-size: 25px;
+    }
+
+    @include for-mobile-only {
+      font-size: 25px;
     }
   }
 }

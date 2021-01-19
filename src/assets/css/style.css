@@ -10,17 +10,22 @@
 
 body {
   background-color: #2f3e46;
+  color: #fff;
+}
+body .page-body {
+  max-width: 100%;
+  width: 500px;
+  padding-top: 15%;
 }
 @media (min-width: 768px) {
   body .page-body {
     margin-left: 100px;
-    margin-top: 15%;
   }
 }
 @media (max-width: 768px) {
   body .page-body {
-    margin-left: 55px;
-    margin-top: 25%;
+    margin: auto;
+    padding: 15px;
   }
 }
 body .page-title {
@@ -96,7 +101,6 @@ body a:focus {
 .home-page .HomeHero .home-title span {
   display: inline-block;
   font-size: 40px;
-  color: #fff;
   cursor: default;
 }
 @media (min-width: 768px) {
@@ -112,6 +116,41 @@ body a:focus {
 .home-page .HomeHero .sub-title {
   color: #cad2c5;
   margin-top: 5px;
+}
+
+.about-page .about-me-description {
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .about-page .about-me-description {
+    max-width: 100%;
+    width: 400px;
+  }
+}
+.about-page .about-me-social-icons {
+  max-width: 100%;
+  width: 500px;
+}
+.about-page .about-me-social-icons span *:hover {
+  color: #fff;
+  cursor: pointer;
+}
+.about-page .about-me-social-icons svg,
+.about-page .about-me-social-icons a {
+  color: #84a98c;
+  margin-right: 25px;
+}
+@media (min-width: 768px) {
+  .about-page .about-me-social-icons svg,
+.about-page .about-me-social-icons a {
+    font-size: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .about-page .about-me-social-icons svg,
+.about-page .about-me-social-icons a {
+    font-size: 25px;
+  }
 }
 
 @keyframes rubberBand {
