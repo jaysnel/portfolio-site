@@ -27,7 +27,7 @@
         :particleSize="4"
         linesColor="#dedede"
         :linesWidth="1">
-        </vue-particles>
+    </vue-particles>
   </div>
 </template>
 

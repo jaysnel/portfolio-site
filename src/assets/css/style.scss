@@ -7,6 +7,8 @@ $color5: #2f3e46;
 $darkcolor: #181818;
 $white: #fff;
 $black: #000;
+$font1: "Bodoni Moda", serif;
+$font2: "Roboto", sans-serif;
 
 @mixin for-mobile-only {
   @media (max-width: 768px) {
@@ -29,12 +31,27 @@ $black: #000;
   width: 100%;
   height: 100%;
   z-index: -999;
+  pointer-events: none;
 }
 
 //Main Styles
 body {
-  background-color: $color5;
+  background-color: $color4;
   color: $white;
+  font-family: $font1;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: $font1;
+  }
+
+  p {
+    text-shadow: 2px 2px $color5;
+    font-family: $font2;
+  }
 
   .page-body {
     max-width: 100%;
@@ -176,7 +193,7 @@ body {
 
   .about-me-social-icons svg,
   .about-me-social-icons a {
-    color: $color2;
+    color: $color1;
     margin-right: 25px;
 
     @include for-desktop-only {
@@ -185,6 +202,36 @@ body {
 
     @include for-mobile-only {
       font-size: 25px;
+    }
+  }
+}
+
+.skills-page {
+  .skills-list {
+    font-size: 20px;
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: flex;
+        flex-direction: column-reverse;
+        list-style-type: none;
+
+        max-width: 100%;
+        width: 100px;
+
+        margin: 15px 0;
+
+        &:hover {
+          color: $color1;
+          cursor: pointer;
+        }
+      }
     }
   }
 }

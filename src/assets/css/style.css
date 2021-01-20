@@ -6,11 +6,24 @@
   width: 100%;
   height: 100%;
   z-index: -999;
+  pointer-events: none;
 }
 
 body {
-  background-color: #2f3e46;
+  background-color: #354f52;
   color: #fff;
+  font-family: "Bodoni Moda", serif;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5 {
+  font-family: "Bodoni Moda", serif;
+}
+body p {
+  text-shadow: 2px 2px #2f3e46;
+  font-family: "Roboto", sans-serif;
 }
 body .page-body {
   max-width: 100%;
@@ -137,7 +150,7 @@ body a:focus {
 }
 .about-page .about-me-social-icons svg,
 .about-page .about-me-social-icons a {
-  color: #84a98c;
+  color: #cad2c5;
   margin-right: 25px;
 }
 @media (min-width: 768px) {
@@ -151,6 +164,28 @@ body a:focus {
 .about-page .about-me-social-icons a {
     font-size: 25px;
   }
+}
+
+.skills-page .skills-list {
+  font-size: 20px;
+}
+.skills-page .skills-list ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+  padding: 0;
+}
+.skills-page .skills-list ul li {
+  display: flex;
+  flex-direction: column-reverse;
+  list-style-type: none;
+  max-width: 100%;
+  width: 100px;
+  margin: 15px 0;
+}
+.skills-page .skills-list ul li:hover {
+  color: #cad2c5;
+  cursor: pointer;
 }
 
 @keyframes rubberBand {
