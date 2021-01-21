@@ -36,7 +36,7 @@ $font2: "Roboto", sans-serif;
 
 //Main Styles
 body {
-  background-color: $color4;
+  background-color: $black;
   color: $white;
   font-family: $font1;
 
@@ -49,7 +49,7 @@ body {
   }
 
   p {
-    text-shadow: 2px 2px $color5;
+    text-shadow: 1px 1px $color5;
     font-family: $font2;
   }
 
@@ -60,7 +60,7 @@ body {
     padding-top: 15%;
 
     @include for-desktop-only {
-      margin-left: 100px;
+      margin-left: 125px;
     }
 
     @include for-mobile-only {
@@ -88,7 +88,7 @@ body {
     flex-direction: column;
     background-color: $darkcolor;
     position: fixed;
-    width: 80px;
+    width: 90px;
     height: 100%;
     top: 0;
     left: 0;
@@ -101,12 +101,12 @@ body {
     font-weight: bold;
     color: #fff;
     @include for-desktop-only {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
 
   a.router-link-exact-active {
-    color: $color3;
+    color: $color2;
   }
 
   .nav-item {
@@ -162,7 +162,7 @@ body {
     }
 
     .sub-title {
-      color: $color1;
+      color: $color2;
 
       margin-top: 5px;
     }
@@ -193,7 +193,7 @@ body {
 
   .about-me-social-icons svg,
   .about-me-social-icons a {
-    color: $color1;
+    color: $color2;
     margin-right: 25px;
 
     @include for-desktop-only {
@@ -208,7 +208,12 @@ body {
 
 .skills-page {
   .skills-list {
-    font-size: 20px;
+    font-size: 24.5px;
+    text-transform: lowercase;
+
+    svg {
+      color: $color2;
+    }
 
     ul {
       display: grid;

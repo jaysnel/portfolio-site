@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "watchyoursass": "sass --watch src/assets/css/style.scss src/assets/css/style.css"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
