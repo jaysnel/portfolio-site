@@ -78,7 +78,12 @@ body a:focus {
   }
 }
 #nav a.router-link-exact-active {
-  color: #84a98c;
+  color: #fff;
+}
+#nav a.router-link-exact-active .link-icon {
+  box-shadow: 0.2px 0.4px 6px 3px #ccc;
+  width: 95%;
+  margin: auto;
 }
 #nav .nav-item {
   text-align: center;

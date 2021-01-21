@@ -106,7 +106,14 @@ body {
   }
 
   a.router-link-exact-active {
-    color: $color2;
+    // color: $color2;
+    color: $white;
+
+    .link-icon {
+      box-shadow: 0.2px 0.4px 6px 3px #ccc;
+      width: 95%;
+      margin: auto;
+    }
   }
 
   .nav-item {
