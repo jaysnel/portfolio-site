@@ -15,6 +15,7 @@
             <div class="project-tools">
                 <div v-for="item in data.tools" :key="item">{{ item }}</div>
             </div>
+            <p v-if="data.details">{{ data.details }}</p>
         </div>
     </div>
 

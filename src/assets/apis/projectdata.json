@@ -3,9 +3,14 @@
         "id": 1,
         "name": "Sports Business Journal (Currently Employed)",
         "projecturl": "https://www.sportsbusinessdaily.com/Journal.aspx",
+        "originalurl": "",
+        "originalurlname": "",
+        "additionalurl": "",
+        "additionalurlname": "",
         "imageurl": "",
         "linkName": "SBJ Website",
-        "tools": ["html", "css", "js", "vue.js", "C#", "Sitecore"]
+        "tools": ["html", "css", "js", "vue.js", "C#", "Sitecore"],
+        "details": ""
     },
     {
         "id": 2,
@@ -13,18 +18,24 @@
         "projecturl": "https://cowfish-design.herokuapp.com/",
         "originalurl": "https://www.thecowfish.com/",
         "originalurlname": "Original",
+        "additionalurl": "",
+        "additionalurlname": "",
         "imageurl": "",
         "linkName": "Redesign",
-        "tools": ["html", "css", "js", "vue.js"]
+        "tools": ["html", "css", "js", "vue.js"],
+        "details": ""
     },
     {
         "id": 3,
         "name": "Missing Person API",
         "projecturl": "https://github.com/jaysnel/fbi-missing-person-db",
+        "originalurl": "",
+        "originalurlname": "",
         "additionalurl": "https://github.com/jaysnel/fbi-missing-person-api",
         "additionalurlname": "API Code",
         "imageurl": "",
         "linkName": "Database Code",
-        "tools": ["node.js", "express.js", "google-puppeteer", "mongodb", "azure"]
+        "tools": ["node.js", "express.js", "google-puppeteer", "mongodb", "azure"],
+        "details": ""
     }
 ]
