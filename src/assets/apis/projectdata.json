@@ -1,16 +1,30 @@
 [
     {
         "id": 1,
-        "name": "Project 1",
-        "projecturl": "google.com",
-        "imageurl": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
-        "tools": ["html", "css", "js"]
+        "name": "Sports Business Journal (Currently Employed)",
+        "projecturl": "https://www.sportsbusinessdaily.com/Journal.aspx",
+        "imageurl": "",
+        "linkName": "SBJ Website",
+        "tools": ["html", "css", "js", "vue.js", "C#", "Sitecore"]
     },
     {
         "id": 2,
-        "name": "Project 2",
-        "projecturl": "google.com",
-        "imageurl": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
-        "tools": ["html", "css", "js"]
+        "name": "Cowfish Redesign",
+        "projecturl": "https://cowfish-design.herokuapp.com/",
+        "originalurl": "https://www.thecowfish.com/",
+        "originalurlname": "Original",
+        "imageurl": "",
+        "linkName": "Redesign",
+        "tools": ["html", "css", "js", "vue.js"]
+    },
+    {
+        "id": 3,
+        "name": "Missing Person API",
+        "projecturl": "https://github.com/jaysnel/fbi-missing-person-db",
+        "additionalurl": "https://github.com/jaysnel/fbi-missing-person-api",
+        "additionalurlname": "API Code",
+        "imageurl": "",
+        "linkName": "Database Code",
+        "tools": ["node.js", "express.js", "google-puppeteer", "mongodb", "azure"]
     }
 ]

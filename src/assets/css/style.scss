@@ -1,14 +1,12 @@
 //Rules
-$color1: #cad2c5;
-$color2: #84a98c;
-$color3: #52796f;
-$color4: #354f52;
-$color5: #2f3e46;
+$color1: #84a98c;
+$color2: #2f3e46;
 $darkcolor: #181818;
 $white: #fff;
 $black: #000;
 $font1: "Bodoni Moda", serif;
 $font2: "Roboto", sans-serif;
+$sourcecodefont: "Source Code Pro", monospace;
 
 @mixin for-mobile-only {
   @media (max-width: 768px) {
@@ -38,19 +36,29 @@ $font2: "Roboto", sans-serif;
 body {
   background-color: $black;
   color: $white;
-  font-family: $font1;
+  font-family: $sourcecodefont;
 
   h1,
   h2,
   h3,
   h4,
   h5 {
-    font-family: $font1;
+    font-family: $sourcecodefont;
   }
 
   p {
-    text-shadow: 1px 1px $color5;
-    font-family: $font2;
+    text-shadow: 1px 1px $color2;
+    font-family: $sourcecodefont;
+  }
+
+  .link {
+    color: $color1;
+  }
+
+  #app {
+    @include for-mobile-only {
+      padding: 15px;
+    }
   }
 
   .page-body {
@@ -65,7 +73,6 @@ body {
 
     @include for-mobile-only {
       margin: auto;
-      padding: 15px;
     }
   }
 
@@ -106,7 +113,7 @@ body {
   }
 
   a.router-link-exact-active {
-    // color: $color2;
+    // color: $color1;
     color: $white;
 
     .link-icon {
@@ -153,15 +160,15 @@ body {
     .home-title {
       span {
         @include for-desktop-only {
-          font-size: 53px;
+          font-size: 45px;
         }
 
         display: inline-block;
-        font-size: 40px;
+        font-size: 30px;
         cursor: default;
 
         &:hover {
-          color: $color3;
+          color: $color1;
           animation: rubberBand 1s;
           transition: all ease-in-out;
         }
@@ -169,7 +176,7 @@ body {
     }
 
     .sub-title {
-      color: $color2;
+      color: $color1;
 
       margin-top: 5px;
     }
@@ -200,7 +207,7 @@ body {
 
   .about-me-social-icons svg,
   .about-me-social-icons a {
-    color: $color2;
+    color: $color1;
     margin-right: 25px;
 
     @include for-desktop-only {
@@ -219,7 +226,7 @@ body {
     text-transform: lowercase;
 
     svg {
-      color: $color2;
+      color: $color1;
     }
 
     ul {
@@ -243,6 +250,67 @@ body {
           color: $color1;
           cursor: pointer;
         }
+      }
+    }
+  }
+}
+
+.portfolio-page {
+  .project-full-list {
+    @include for-desktop-only {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 50px;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+
+      a {
+        margin-right: 15px;
+        margin-bottom: 8px;
+      }
+    }
+
+    .project-tools {
+      display: flex;
+      flex-wrap: wrap;
+
+      div {
+        margin-right: 15px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.notfound-page {
+  img {
+    max-width: 100%;
+    width: 250px;
+  }
+
+  .missing-person-details {
+    @include for-desktop-only {
+      margin-bottom: 150px;
+    }
+
+    @include for-mobile-only {
+      margin-bottom: 100px;
+    }
+
+    div {
+      border-bottom: 1px solid #fff;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+
+      span {
+        font-weight: bold;
       }
     }
   }

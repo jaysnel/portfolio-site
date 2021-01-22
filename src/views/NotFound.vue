@@ -4,21 +4,23 @@
         <p>
         <!-- <a href="/">Go home?</a> -->
         </p>
-        <div v-for="person in higlightletedPerson" :key="person.Name">
-          <div>DOB: {{ person["Date(s) of Birth Used"]}}</div>
-          <div>Detals: {{ person.Details }}</div>
-          <div>Eyes: {{ person.Eyes }}</div>
-          <div>Hair: {{ person.Hair }}</div>
-          <div>Headshot: {{ person.Headshot }}</div>
-          <div>Height: {{ person.Height }}</div>
-          <div>Name: {{ person.Name }}</div>
-          <div>Place Of Birth: {{ person["Place of Birth"] }}</div>
-          <div>Race: {{ person.Race }}</div>
-          <div>Sex: {{ person.Sex }}</div>
-          <div>Submit A Tip: {{ person["Submit a Tip"] }}</div>
-          <div>Weight: {{ person.Weight }}</div>
+        <div v-for="person in higlightletedPerson" :key="person.Name" class="missing-person-details">
+          <p>Unfortunately we cant find the page you are looking for. Click <a href="/" class="link">here</a> to head back to a place more familiar.</p>
+          <p>We also can't find {{ person.Name.toLowerCase() }} but the information we do have is below. If you can help please do and keep this person in your thoughts.</p>
+          <div><img :src="person.Headshot" :alt="person.Name">
+          <br/>
+          <h1>{{ person.Name }}</h1></div>
+          <div><span>DOB:</span> {{ person["Date(s) of Birth Used"] ? person["Date(s) of Birth Used"] : notAvailable}}</div>
+          <div><span>Detals:</span> {{ person.Details ? person.Details : notAvailable }}</div>
+          <div><span>Eyes:</span> {{ person.Eyes ? person.Eyes : notAvailable }}</div>
+          <div><span>Hair:</span> {{ person.Hair ? person.Hair : notAvailable }}</div>
+          <div><span>Height:</span> {{ person.Height ? person.Height : notAvailable }}</div>
+          <div><span>Place Of Birth:</span> {{ person["Place of Birth"] ? person["Place of Birth"] : notAvailable }}</div>
+          <div><span>Race:</span> {{ person.Race ? person.Race : notAvailable }}</div>
+          <div><span>Sex:</span> {{ person.Sex ? person.Sex : notAvailable }}</div>
+          <div><span>Submit A Tip:</span> {{ person["Submit a Tip"] ? person["Submit a Tip"] : notAvailable }}</div>
+          <div><span>Weight:</span> {{ person.Weight ? person.Weight : notAvailable }}</div>
         </div>
-        <p>{{ missingpeople }}</p>
     </div>
 </template>
 
@@ -31,6 +33,7 @@
       return {
           missingpeopleurl: "https://fbimissingpersonapi.azurewebsites.net/v1/all",
           missingpeople: null,
+          notAvailable: "N/A",
           higlightletedPerson: []
       }
     },
@@ -38,8 +41,6 @@
       async getMissingPeople() {
         await axios.get(this.missingpeopleurl)
         .then( res => {
-          console.log(res.data);
-
           this.missingpeople = res.data;
           this.getRandomPerson(res.data);
         })

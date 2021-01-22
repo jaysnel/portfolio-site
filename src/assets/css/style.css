@@ -12,18 +12,26 @@
 body {
   background-color: #000;
   color: #fff;
-  font-family: "Bodoni Moda", serif;
+  font-family: "Source Code Pro", monospace;
 }
 body h1,
 body h2,
 body h3,
 body h4,
 body h5 {
-  font-family: "Bodoni Moda", serif;
+  font-family: "Source Code Pro", monospace;
 }
 body p {
   text-shadow: 1px 1px #2f3e46;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Code Pro", monospace;
+}
+body .link {
+  color: #84a98c;
+}
+@media (max-width: 768px) {
+  body #app {
+    padding: 15px;
+  }
 }
 body .page-body {
   max-width: 100%;
@@ -38,7 +46,6 @@ body .page-body {
 @media (max-width: 768px) {
   body .page-body {
     margin: auto;
-    padding: 15px;
   }
 }
 body .page-title {
@@ -118,16 +125,16 @@ body a:focus {
 }
 .home-page .HomeHero .home-title span {
   display: inline-block;
-  font-size: 40px;
+  font-size: 30px;
   cursor: default;
 }
 @media (min-width: 768px) {
   .home-page .HomeHero .home-title span {
-    font-size: 53px;
+    font-size: 45px;
   }
 }
 .home-page .HomeHero .home-title span:hover {
-  color: #52796f;
+  color: #84a98c;
   animation: rubberBand 1s;
   transition: all ease-in-out;
 }
@@ -193,8 +200,58 @@ body a:focus {
   margin: 15px 0;
 }
 .skills-page .skills-list ul li:hover {
-  color: #cad2c5;
+  color: #84a98c;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .portfolio-page .project-full-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+  }
+}
+.portfolio-page .project-full-list h2 {
+  font-size: 18px;
+}
+.portfolio-page .project-full-list .project-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+.portfolio-page .project-full-list .project-links a {
+  margin-right: 15px;
+  margin-bottom: 8px;
+}
+.portfolio-page .project-full-list .project-tools {
+  display: flex;
+  flex-wrap: wrap;
+}
+.portfolio-page .project-full-list .project-tools div {
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+
+.notfound-page img {
+  max-width: 100%;
+  width: 250px;
+}
+@media (min-width: 768px) {
+  .notfound-page .missing-person-details {
+    margin-bottom: 150px;
+  }
+}
+@media (max-width: 768px) {
+  .notfound-page .missing-person-details {
+    margin-bottom: 100px;
+  }
+}
+.notfound-page .missing-person-details div {
+  border-bottom: 1px solid #fff;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+.notfound-page .missing-person-details div span {
+  font-weight: bold;
 }
 
 @keyframes rubberBand {
