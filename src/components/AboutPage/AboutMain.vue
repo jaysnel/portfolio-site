@@ -13,6 +13,9 @@
         In my free time you can find me playing chess, learning about security, excercising or
         just relaxing around the house with the dog.
       </p>
+      <p>
+        This also isn't the only place on the web where you can find me, here is a few more along with my work history. Talk to you soon!
+      </p>
     </div>
   </div>
 </template>

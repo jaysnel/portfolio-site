@@ -1,6 +1,6 @@
 <template>
-  <div class="portfolio-page page-body">
-    <PortfolioMain />
+  <div class="projects-page page-body">
+    <ProjectsMain />
 
     <div class="project-full-list">
         <div v-for="data in projectData" :key="data.id" class="project-container">
@@ -11,7 +11,7 @@
               <a v-if="data.additionalurl" :href="data.additionalurl" class="link" target="_blank">{{ data.additionalurlname }}</a>
             </div>
             <img v-if="data.imageurl" :src="data.imageurl"/>
-            <span><strong>Tools:</strong></span>
+            <span><strong>Tools Used:</strong></span>
             <div class="project-tools">
                 <div v-for="item in data.tools" :key="item">{{ item }}</div>
             </div>
@@ -22,12 +22,12 @@
   </div>
 </template>
 <script>
-import PortfolioMain from '@/components/PortfolioPage/Portfolio.vue';
+import ProjectsMain from '@/components/ProjectsPage/Projects.vue';
 import json from '@/assets/apis/projectdata.json';
 
 export default {
   components: {
-      PortfolioMain
+      ProjectsMain
   },
   data: function() {
       return {

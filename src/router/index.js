@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Skills from '../views/Skills.vue'
-import Portfolio from '../views/Portfolio.vue'
+import Projects from '../views/Projects.vue'
 import ContactPage from '../views/Contact.vue'
 import NotFound from '../views/NotFound.vue';
 
@@ -26,9 +26,9 @@ const routes = [
     component: Skills
   },
   {
-    path: '/portfolio',
-    name: 'Portfolio',
-    component: Portfolio
+    path: '/projects',
+    name: 'projects',
+    component: Projects
   },
   {
     path: '/contact',

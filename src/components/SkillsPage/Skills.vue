@@ -11,6 +11,8 @@
           <li>Node.js<font-awesome-icon :icon="{ prefix: 'fab', iconName: 'node' }"/></li>
           <li>Sitecore</li>
           <li>Photoshop</li>
+          <li>UX</li>
+          <li>Bootstrap</li>
         </ul>
       </div>
   </div>

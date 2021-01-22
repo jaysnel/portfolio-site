@@ -1,11 +1,11 @@
 <template>
   <div class="Portolio-Hero">
-    <h1 class="page-title portfolio-title">Portfolio</h1>
+    <h1 class="page-title projects-title">Projects</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: "PortfolioMain",
+  name: "ProjectsMain",
 };
 </script>

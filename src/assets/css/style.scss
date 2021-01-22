@@ -68,7 +68,7 @@ body {
     padding-top: 15%;
 
     @include for-desktop-only {
-      margin-left: 125px;
+      margin-left: 150px;
     }
 
     @include for-mobile-only {
@@ -95,7 +95,7 @@ body {
     flex-direction: column;
     background-color: $darkcolor;
     position: fixed;
-    width: 90px;
+    width: 100px;
     height: 100%;
     top: 0;
     left: 0;
@@ -108,7 +108,7 @@ body {
     font-weight: bold;
     color: #fff;
     @include for-desktop-only {
-      font-size: 18px;
+      font-size: 20px;
     }
   }
 
@@ -130,7 +130,7 @@ body {
     }
 
     .link-icon {
-      display: block;
+      display: inline-block;
     }
     .link-text {
       display: none;
@@ -141,7 +141,8 @@ body {
         display: none;
       }
       .link-text {
-        display: block;
+        display: inline-block;
+        font-size: 18px;
       }
     }
   }
@@ -255,7 +256,7 @@ body {
   }
 }
 
-.portfolio-page {
+.projects-page {
   .project-full-list {
     @include for-desktop-only {
       display: grid;

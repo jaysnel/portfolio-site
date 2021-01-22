@@ -40,7 +40,7 @@ body .page-body {
 }
 @media (min-width: 768px) {
   body .page-body {
-    margin-left: 125px;
+    margin-left: 150px;
   }
 }
 @media (max-width: 768px) {
@@ -66,7 +66,7 @@ body a:focus {
     flex-direction: column;
     background-color: #181818;
     position: fixed;
-    width: 90px;
+    width: 100px;
     height: 100%;
     top: 0;
     left: 0;
@@ -81,7 +81,7 @@ body a:focus {
 }
 @media (min-width: 768px) {
   #nav a {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 #nav a.router-link-exact-active {
@@ -101,7 +101,7 @@ body a:focus {
   }
 }
 #nav .nav-item .link-icon {
-  display: block;
+  display: inline-block;
 }
 #nav .nav-item .link-text {
   display: none;
@@ -110,7 +110,8 @@ body a:focus {
   display: none;
 }
 #nav .nav-item:hover .link-text {
-  display: block;
+  display: inline-block;
+  font-size: 18px;
 }
 
 @media (min-width: 768px) {
@@ -205,28 +206,28 @@ body a:focus {
 }
 
 @media (min-width: 768px) {
-  .portfolio-page .project-full-list {
+  .projects-page .project-full-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 50px;
   }
 }
-.portfolio-page .project-full-list h2 {
+.projects-page .project-full-list h2 {
   font-size: 18px;
 }
-.portfolio-page .project-full-list .project-links {
+.projects-page .project-full-list .project-links {
   display: flex;
   flex-wrap: wrap;
 }
-.portfolio-page .project-full-list .project-links a {
+.projects-page .project-full-list .project-links a {
   margin-right: 15px;
   margin-bottom: 8px;
 }
-.portfolio-page .project-full-list .project-tools {
+.projects-page .project-full-list .project-tools {
   display: flex;
   flex-wrap: wrap;
 }
-.portfolio-page .project-full-list .project-tools div {
+.projects-page .project-full-list .project-tools div {
   margin-right: 15px;
   margin-bottom: 5px;
 }

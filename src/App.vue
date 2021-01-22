@@ -13,9 +13,9 @@
       <span class="link-icon"><font-awesome-icon icon="tools" /></span>
       <span class="link-text">Skills</span>
       </router-link>
-      <router-link to="/portfolio" class="nav-portfolio nav-item">
+      <router-link to="/projects" class="nav-projects nav-item">
       <span class="link-icon"><font-awesome-icon icon="scroll" /></span>
-      <span class="link-text">Portfolio</span>
+      <span class="link-text">Projects</span>
       </router-link>
       <router-link to="/contact" class="nav-contact nav-item">
       <span class="link-icon"><font-awesome-icon icon="id-card" /></span>
