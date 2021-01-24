@@ -21,3 +21,25 @@ new Vue({
   router,
   render: h => h(App)
 }).$mount('#app');
+
+// using this to try and prevent cold start on azure because I dont want to pay to keep api warm...going to try something different as this causes an unexpected erro on first load.
+// export let fullListOfMissingPeople = [];
+// router.beforeEach((to, from, next) => {
+
+//   if(fullListOfMissingPeople.length == 0) {
+//     axios.get("https://fbimissingpersonapi.azurewebsites.net/v1/all/")
+//         .then( res => {
+//           fullListOfMissingPeople = res.data;
+//           console.log(fullListOfMissingPeople);
+//           next();
+//         })
+//         .catch(err => {
+//           console.log(err);
+//           next();
+//         })
+//   }
+//   else {
+//     console.log("data full");
+//     next();
+//   }
+// })

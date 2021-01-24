@@ -59,8 +59,6 @@ export default {
       }
     },
     closeMobileNavOnNewPage() {
-      console.log(1235);
-
       let navigation = document.getElementById("nav");
       let openicon = document.getElementById("mobile-menu-open");
       let closeicon = document.getElementById("mobile-menu-close");

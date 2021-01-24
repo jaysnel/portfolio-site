@@ -8,6 +8,54 @@ $font1: "Bodoni Moda", serif;
 $font2: "Roboto", sans-serif;
 $sourcecodefont: "Source Code Pro", monospace;
 
+//Pageloader
+$hollowBoxSize: 3em;
+$hollowLight: $white;
+$hollowDark: $black;
+$hollowTiming: 1.25s;
+
+.hollowLoader {
+  width: $hollowBoxSize;
+  height: $hollowBoxSize;
+  animation: loaderAnim $hollowTiming infinite ease-in-out;
+  outline: 1px solid transparent;
+  .largeBox {
+    height: $hollowBoxSize;
+    width: $hollowBoxSize;
+    background-color: $hollowLight;
+    outline: 1px solid transparent;
+    position: fixed;
+  }
+  .smallBox {
+    height: $hollowBoxSize;
+    width: $hollowBoxSize;
+    background-color: $hollowDark;
+    position: fixed;
+    z-index: 1;
+    outline: 1px solid transparent;
+    animation: smallBoxAnim $hollowTiming alternate infinite ease-in-out;
+  }
+}
+
+@keyframes smallBoxAnim {
+  0% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(0.75);
+  }
+}
+
+@keyframes loaderAnim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+//End Page Loader
+
 @mixin for-mobile-only {
   @media (max-width: 768px) {
     @content;
@@ -342,6 +390,47 @@ body {
         margin-right: 15px;
         margin-bottom: 5px;
       }
+    }
+  }
+}
+
+.contact-page {
+  .form-contact-message {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input,
+  textarea {
+    color: $white;
+    max-width: 100%;
+    width: 100%;
+    border: none;
+    padding-left: 15px;
+    // border-radius: 20px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  input {
+    height: 35px;
+  }
+
+  textarea {
+    height: 150px;
+    padding-top: 15px;
+  }
+
+  button {
+    background-color: $color1;
+    color: $white;
+    max-width: 100%;
+    width: 50%;
+    border: 1px solid $color1;
+    padding: 15px;
+
+    &:hover {
+      cursor: pointer;
     }
   }
 }
