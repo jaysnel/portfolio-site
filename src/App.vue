@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+    <a href="javascript:void(0);" class="nav-mobile-menu-icon" @click="openAndCloseMobileNav()">
+    <font-awesome-icon icon="bars" id="mobile-menu-open"/>
+    <font-awesome-icon icon="times" id="mobile-menu-close"/>
+    </a>
     <div id="nav">
       <router-link to="/" class="nav-home nav-item">
       <span class="link-icon"><font-awesome-icon icon="home" /></span>
@@ -34,6 +38,29 @@
     </vue-particles>
   </div>
 </template>
+<script>
+export default {
+  methods: {
+    openAndCloseMobileNav() {
+      var navigation = document.getElementById("nav");
+      var openicon = document.getElementById("mobile-menu-open");
+      var closeicon = document.getElementById("mobile-menu-close");
+
+      if (navigation.style.display === "flex") {
+        navigation.style.display = "none";
+
+        openicon.style.display = "block";
+        closeicon.style.display = "none";
+      } else {
+        navigation.style.display = "flex";
+
+        openicon.style.display = "none";
+        closeicon.style.display = "block";
+      }
+    }
+  }
+}
+</script>
 
 <style>
 @import './assets/css/style.css';

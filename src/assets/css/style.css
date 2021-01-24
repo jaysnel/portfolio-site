@@ -33,6 +33,11 @@ body .link {
     padding: 15px;
   }
 }
+@media (min-width: 768px) {
+  body #app .nav-mobile-menu-icon {
+    display: none;
+  }
+}
 body .page-body {
   max-width: 100%;
   width: 500px;
@@ -56,13 +61,33 @@ body a:focus {
   border: none;
 }
 
+.nav-mobile-menu-icon {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+.nav-mobile-menu-icon #mobile-menu-open {
+  display: block;
+}
+.nav-mobile-menu-icon #mobile-menu-close {
+  display: none;
+}
+@media (min-width: 768px) {
+  .nav-mobile-menu-icon #mobile-menu-open,
+.nav-mobile-menu-icon #mobile-menu-close {
+    display: none;
+  }
+}
+
 #nav {
   position: sticky;
   padding: 30px;
 }
 @media (min-width: 768px) {
   #nav {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     background-color: #181818;
     position: fixed;
@@ -73,6 +98,15 @@ body a:focus {
     padding: 0;
     z-index: 3;
     min-height: 500px;
+  }
+}
+@media (max-width: 768px) {
+  #nav {
+    display: none;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
   }
 }
 #nav a {
@@ -99,19 +133,36 @@ body a:focus {
   #nav .nav-item {
     margin: 15px 0;
   }
+  #nav .nav-item .link-icon {
+    display: inline-block;
+  }
+  #nav .nav-item .link-text {
+    display: none;
+    font-size: 18px;
+  }
 }
-#nav .nav-item .link-icon {
-  display: inline-block;
-}
-#nav .nav-item .link-text {
-  display: none;
+@media (max-width: 768px) {
+  #nav .nav-item {
+    margin: 5px 0;
+    text-decoration: none;
+  }
+  #nav .nav-item .link-icon {
+    display: none;
+  }
+  #nav .nav-item .link-text {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  #nav .nav-item .link-text:hover {
+    text-decoration: underline;
+  }
 }
 #nav .nav-item:hover .link-icon {
   display: none;
 }
 #nav .nav-item:hover .link-text {
   display: inline-block;
-  font-size: 18px;
 }
 
 @media (min-width: 768px) {
@@ -205,6 +256,9 @@ body a:focus {
   cursor: pointer;
 }
 
+.projects-page {
+  width: 1200px !important;
+}
 @media (min-width: 768px) {
   .projects-page .project-full-list {
     display: grid;

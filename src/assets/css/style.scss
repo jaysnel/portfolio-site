@@ -59,6 +59,12 @@ body {
     @include for-mobile-only {
       padding: 15px;
     }
+
+    @include for-desktop-only {
+      .nav-mobile-menu-icon {
+        display: none;
+      }
+    }
   }
 
   .page-body {
@@ -86,12 +92,34 @@ body {
   }
 }
 
+.nav-mobile-menu-icon {
+  display: flex;
+  justify-content: center;
+  color: $white;
+  margin-bottom: 15px;
+  font-size: 30px;
+
+  #mobile-menu-open {
+    display: block;
+  }
+  #mobile-menu-close {
+    display: none;
+  }
+
+  @include for-desktop-only() {
+    #mobile-menu-open,
+    #mobile-menu-close {
+      display: none;
+    }
+  }
+}
+
 #nav {
   position: sticky;
   padding: 30px;
 
   @include for-desktop-only {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     background-color: $darkcolor;
     position: fixed;
@@ -102,6 +130,14 @@ body {
     padding: 0;
     z-index: 3;
     min-height: 500px;
+  }
+
+  @include for-mobile-only() {
+    display: none;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
   }
 
   a {
@@ -127,13 +163,32 @@ body {
     text-align: center;
     @include for-desktop-only {
       margin: 15px 0;
+
+      .link-icon {
+        display: inline-block;
+      }
+      .link-text {
+        display: none;
+        font-size: 18px;
+      }
     }
 
-    .link-icon {
-      display: inline-block;
-    }
-    .link-text {
-      display: none;
+    @include for-mobile-only {
+      margin: 5px 0;
+      text-decoration: none;
+
+      .link-icon {
+        display: none;
+      }
+      .link-text {
+        display: block;
+        margin: 0;
+        padding: 0;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
 
     &:hover {
@@ -142,7 +197,6 @@ body {
       }
       .link-text {
         display: inline-block;
-        font-size: 18px;
       }
     }
   }
@@ -257,6 +311,8 @@ body {
 }
 
 .projects-page {
+  width: 1200px !important;
+
   .project-full-list {
     @include for-desktop-only {
       display: grid;
