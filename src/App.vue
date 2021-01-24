@@ -7,23 +7,23 @@
     <div id="nav">
       <router-link to="/" class="nav-home nav-item">
       <span class="link-icon"><font-awesome-icon icon="home" /></span>
-      <span class="link-text">Home</span>
+      <span class="link-text" @click="closeMobileNavOnNewPage()">Home</span>
       </router-link>
       <router-link to="/about" class="nav-about nav-item">
       <span class="link-icon"><font-awesome-icon icon="user" /></span>
-      <span class="link-text">About</span>
+      <span class="link-text" @click="closeMobileNavOnNewPage()">About</span>
       </router-link>
       <router-link to="/skills" class="nav-skills nav-item">
       <span class="link-icon"><font-awesome-icon icon="tools" /></span>
-      <span class="link-text">Skills</span>
+      <span class="link-text" @click="closeMobileNavOnNewPage()">Skills</span>
       </router-link>
       <router-link to="/projects" class="nav-projects nav-item">
       <span class="link-icon"><font-awesome-icon icon="scroll" /></span>
-      <span class="link-text">Projects</span>
+      <span class="link-text" @click="closeMobileNavOnNewPage()">Projects</span>
       </router-link>
       <router-link to="/contact" class="nav-contact nav-item">
       <span class="link-icon"><font-awesome-icon icon="id-card" /></span>
-      <span class="link-text">Contact</span>
+      <span class="link-text" @click="closeMobileNavOnNewPage()">Contact</span>
       </router-link>
     </div>
     <router-view/>
@@ -42,9 +42,9 @@
 export default {
   methods: {
     openAndCloseMobileNav() {
-      var navigation = document.getElementById("nav");
-      var openicon = document.getElementById("mobile-menu-open");
-      var closeicon = document.getElementById("mobile-menu-close");
+      let navigation = document.getElementById("nav");
+      let openicon = document.getElementById("mobile-menu-open");
+      let closeicon = document.getElementById("mobile-menu-close");
 
       if (navigation.style.display === "flex") {
         navigation.style.display = "none";
@@ -56,6 +56,20 @@ export default {
 
         openicon.style.display = "none";
         closeicon.style.display = "block";
+      }
+    },
+    closeMobileNavOnNewPage() {
+      console.log(1235);
+
+      let navigation = document.getElementById("nav");
+      let openicon = document.getElementById("mobile-menu-open");
+      let closeicon = document.getElementById("mobile-menu-close");
+
+      if (navigation.style.display === "flex") {
+          navigation.style.display = "none";
+
+          openicon.style.display = "block";
+          closeicon.style.display = "none";
       }
     }
   }
