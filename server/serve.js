@@ -1,5 +1,4 @@
 // imports
-const emailjs = require('emailjs-com');
 const dotenv = require('dotenv');
 dotenv.config();
 
@@ -10,9 +9,10 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
+const { default: axios } = require('axios');
 
-// const emailServiceId = process.env.APP_SERVICE_ID;
-// const emailTemplateId = process.env.APP_TEMPLATE_ID;
+const emailServiceId = process.env.APP_SERVICE_ID;
+const emailTemplateId = process.env.APP_TEMPLATE_ID;
 const emailUserId = process.env.APP_USER_ID;
 
 //security
@@ -22,28 +22,29 @@ app.use(cors());
 app.use(morgan('combined'));
 
 
-// defining an array to work as the database (temporary solution)
-
 app.get('/', (req, res) => {
-  res.send(ads);
+  res.send("Working.");
 });
 
-app.get('/email', (req, res) => {
-    res.send("hello, will add emailjs another time");
-    //   try {
-    //     console.log("trying...");
-    //     emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target,
-    //     'YOUR_USER_ID', {
-    //       name: this.name,
-    //       email: this.email,
-    //       message: this.message
-    //     })
-    //   console.log("finished")
-    //   } catch(error) {
-    //       console.log({error})
-    //   }
 
-    })
+app.post('/email', (req, res) => {
+
+  let formdata = req.body;
+  let finalData = {
+    service_id: emailServiceId,
+    template_id: emailTemplateId,
+    user_id: emailUserId,
+    template_params: formdata
+  }
+
+  axios.post('https://api.emailjs.com/api/v1.0/email/send', finalData)
+      .then(res => {
+        console.log(res)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    });
 
 
 app.listen(3001, () => {

@@ -325,6 +325,9 @@ body a:focus {
   margin-bottom: 5px;
 }
 
+.contact-page .errors {
+  color: #ff0000;
+}
 .contact-page .form-contact-message {
   display: flex;
   flex-direction: column;

@@ -4,6 +4,7 @@ $color2: #2f3e46;
 $darkcolor: #181818;
 $white: #fff;
 $black: #000;
+$error: #ff0000;
 $font1: "Bodoni Moda", serif;
 $font2: "Roboto", sans-serif;
 $sourcecodefont: "Source Code Pro", monospace;
@@ -395,6 +396,10 @@ body {
 }
 
 .contact-page {
+  .errors {
+    color: $error;
+  }
+
   .form-contact-message {
     display: flex;
     flex-direction: column;
