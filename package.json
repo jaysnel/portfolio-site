@@ -6,6 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "start": "node serve.js",
     "watchyoursass": "sass --watch src/assets/css/style.scss src/assets/css/style.css"
   },
   "dependencies": {
