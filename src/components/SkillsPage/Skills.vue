@@ -9,6 +9,7 @@
           <li>JS<font-awesome-icon :icon="{ prefix: 'fab', iconName: 'js' }"/></li>
           <li>Vue.js<font-awesome-icon :icon="{ prefix: 'fab', iconName: 'vuejs' }"/></li>
           <li>Node.js<font-awesome-icon :icon="{ prefix: 'fab', iconName: 'node' }"/></li>
+          <li>MongoDB</li>
           <li>Sitecore</li>
           <li>Photoshop</li>
           <li>UX</li>

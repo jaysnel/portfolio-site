@@ -11,7 +11,7 @@
           <label for="Message">Message:</label>
           <textarea class="form-styling" type="text" name="Message" placeholder="Message" v-model="message"/>
         </form>
-        <div class="form-captcha-validation">{{ randomNumberOne }} + {{ randomNumberTwo }}: <input type="text" v-model="validationCheck"></div>
+        <div class="form-captcha-validation">Security Check {{ randomNumberOne }} + {{ randomNumberTwo }}: <input type="text" v-model="validationCheck"></div>
         <div class="errors">
           <p v-if="missingNameErr">{{ missingName }}</p>
           <p v-if="missingEmailErr">{{ missingEmail }}</p>
@@ -33,6 +33,10 @@ data() {
       name: "",
       email: "",
       message: "",
+      emailjsapiurl: "https://api.emailjs.com/api/v1.0/email/send",
+      emailServiceId: process.env.VUE_APP_SERVICE_ID,
+      emailTemplateId: process.env.VUE_APP_TEMPLATE_ID,
+      emailUserId: process.env.VUE_APP_USER_ID,
       randomNumberOne: null,
       randomNumberTwo: null,
       validationAnswer: null,
@@ -51,9 +55,9 @@ data() {
   }
 },
   methods: {
-    formValidationData() {
-      let randomNumber1 = Math.floor(Math.random() * Math.floor(100));
-      let randomNumber2 = Math.floor(Math.random() * Math.floor(50));
+    securityCheckData() {
+      let randomNumber1 = Math.floor(Math.random() * Math.floor(10));
+      let randomNumber2 = Math.floor(Math.random() * Math.floor(10));
 
       this.randomNumberOne = randomNumber1;
       this.randomNumberTwo = randomNumber2;
@@ -98,6 +102,11 @@ data() {
     sendEmail() {
       let validForm = this.formValidationCheck();
       if(!validForm) return false;
+      
+      let url = this.emailjsapiurl;
+      let serviceId = this.emailServiceId;
+      let templateId = this.emailTemplateId;
+      let userId = this.emailUserId;
 
 
       let data = {
@@ -105,21 +114,25 @@ data() {
         reply_to: this.email,
         message: this.message
       }
-      
-      axios.post("http://localhost:3001/email", data)
-      .then((res) => {
-        console.log(res);
-        this.name = "";
-        this.email = "";
-        this.message = "";
+
+      let finalData = {
+        service_id: serviceId,
+        template_id: templateId,
+        user_id: userId,
+        template_params: data
+      }
+
+  axios.post(url, finalData)
+      .then(res => {
+        console.log(res)
       })
-      .catch((err) => {
-        console.log(err);
+      .catch(err => {
+        console.log(err)
       })
     }
   },
   mounted() {
-    this.formValidationData();
+    this.securityCheckData();
   }
 }
 </script>
