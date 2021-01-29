@@ -1,6 +1,8 @@
 <template>
   <div class="projects-page page-body">
-    <ProjectsMain />
+    <div class="Portolio-Hero">
+    <h1 class="page-title projects-title">Projects</h1>
+  </div>
 
     <div class="project-full-list">
         <div v-for="data in projectData" :key="data.id" class="project-container">
@@ -22,13 +24,9 @@
   </div>
 </template>
 <script>
-import ProjectsMain from '@/components/ProjectsPage/Projects.vue';
 import json from '@/assets/apis/projectdata.json';
 
 export default {
-  components: {
-      ProjectsMain
-  },
   data: function() {
       return {
           projectData: json

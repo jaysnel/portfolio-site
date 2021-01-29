@@ -305,6 +305,15 @@ body a:focus {
     grid-gap: 50px;
   }
 }
+.projects-page .project-full-list .project-container {
+  border: 1px solid #fff;
+  padding: 15px;
+}
+@media (max-width: 768px) {
+  .projects-page .project-full-list .project-container {
+    margin: 25px 0;
+  }
+}
 .projects-page .project-full-list h2 {
   font-size: 18px;
 }

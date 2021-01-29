@@ -369,6 +369,17 @@ body {
       grid-gap: 50px;
     }
 
+    .project-container {
+      border: 1px solid $white;
+      padding: 15px;
+    }
+
+    @include for-mobile-only() {
+      .project-container {
+        margin: 25px 0;
+      }
+    }
+
     h2 {
       font-size: 18px;
     }
