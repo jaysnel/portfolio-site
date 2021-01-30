@@ -8,9 +8,9 @@
         <div v-for="data in projectData" :key="data.id" class="project-container">
             <h2>{{ data.name }}</h2>
             <div class="project-links">
-              <a :href="data.projecturl" class="link" target="_blank">{{ data.linkName }}</a>
-              <a v-if="data.originalurl" :href="data.originalurl" class="link" target="_blank">{{ data.originalurlname }}</a>
-              <a v-if="data.additionalurl" :href="data.additionalurl" class="link" target="_blank">{{ data.additionalurlname }}</a>
+              <a :href="data.projecturl" class="link" :title="data.linkName" target="_blank">{{ data.linkName }}</a>
+              <a v-if="data.originalurl" :href="data.originalurl" class="link" :title="data.originalurlname" target="_blank">{{ data.originalurlname }}</a>
+              <a v-if="data.additionalurl" :href="data.additionalurl" class="link" :title="data.additionalurlname" target="_blank">{{ data.additionalurlname }}</a>
             </div>
             <img v-if="data.imageurl" :src="data.imageurl"/>
             <span><strong>Tools Used:</strong></span>
