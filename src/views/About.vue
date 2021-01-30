@@ -23,6 +23,7 @@
       <span><a href="https://twitter.com/jaylanthedev" target="_blank"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'twitter' }"/></a></span>
       <span><a href="https://www.linkedin.com/in/jaylansnelson/" target="_blank"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'linkedin' }"/></a></span>
       <span><a href="https://github.com/jaysnel/" target="_blank"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'github' }"/></a></span>
+      <span><a href="http://jaylanthedev.tech/" target="_blank"><font-awesome-icon :icon="{ prefix: 'fa', iconName: 'pencil-alt' }"/></a></span>
       <span><a :href="pdfLink" target="_blank" class="button">Resume</a></span>
   </div>
   </div>

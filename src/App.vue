@@ -19,7 +19,7 @@
       </router-link>
       <router-link to="/projects" class="nav-projects nav-item">
       <span class="link-icon"><font-awesome-icon icon="scroll" /></span>
-      <span class="link-text" @click="closeMobileNavOnNewPage()">Projects</span>
+      <span class="link-text" @click="closeMobileNavOnNewPage()">Portfolio</span>
       </router-link>
       <router-link to="/contact" class="nav-contact nav-item">
       <span class="link-icon"><font-awesome-icon icon="id-card" /></span>

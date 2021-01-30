@@ -1,7 +1,7 @@
 <template>
   <div class="projects-page page-body">
     <div class="Portolio-Hero">
-    <h1 class="page-title projects-title">Projects</h1>
+    <h1 class="page-title projects-title">Portfolio</h1>
   </div>
 
     <div class="project-full-list">

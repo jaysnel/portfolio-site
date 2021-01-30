@@ -2,4 +2,5 @@
 
 ## My Portofolio
 
-Will soon add link after completion and hosting.
+Hello! You can view my portfolio at the link below. Enjoy!
+https://jaylanthedev.com

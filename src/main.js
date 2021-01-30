@@ -5,11 +5,11 @@ import axios from 'axios'
 import VueParticles from 'vue-particles'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faTwitter, faLinkedin, faGithub, faHtml5, faCss3Alt, faSass, faJs, faVuejs, faNode } from '@fortawesome/free-brands-svg-icons'
-import { faHome, faUser, faTools,  faIdCard, faBriefcase, faThList, faCode, faScroll, faBars, faTimes} from '@fortawesome/free-solid-svg-icons'
+import { faHome, faUser, faTools,  faIdCard, faBriefcase, faThList, faCode, faScroll, faBars, faTimes, faPencilAlt} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 library.add(
-  faTimes,
+  faTimes, faPencilAlt,
   faHome, faUser, faTools, faIdCard, faBriefcase, faThList, faTwitter, faLinkedin, faGithub, faCode, faHtml5, faCss3Alt, faSass, faJs, faVuejs, faNode, faScroll, faBars );
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
