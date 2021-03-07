@@ -35,7 +35,7 @@ export default {
   name: "AboutMain",
   data() {
   return {
-    pdfLink: require('../assets/resume/Jaylan_Snelson_Resume.pdf')
+    pdfLink: require('../assets/resume/jaylan-snelson-resume.pdf')
   }
 }
 };
