@@ -24,7 +24,6 @@
       <span><a href="https://www.linkedin.com/in/jaylansnelson/" title="LinkedIn" target="_blank"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'linkedin' }"/></a></span>
       <span><a href="https://github.com/jaysnel/" title="Github" target="_blank"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'github' }"/></a></span>
       <span><a href="https://jaylanthedev.medium.com/" title="Blog" target="_blank"><font-awesome-icon :icon="{ prefix: 'fa', iconName: 'pencil-alt' }"/></a></span>
-      <span><a :href="pdfLink" target="_blank" title="Resume" class="button">Resume</a></span>
   </div>
   </div>
   </div>
