@@ -39,7 +39,7 @@
     },
     data: function() {
       return {
-          missingpeopleurl: "https://fbimissingpersonapi.azurewebsites.net/v1/all/",
+          missingpeopleurl: "https://fbi-missing-person-api.herokuapp.com/v1/all",
           missingpeople: null,
           notAvailable: "N/A",
           higlightletedPerson: [],
