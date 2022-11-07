@@ -3,14 +3,14 @@
         "id": 1,
         "name": "Missing Person Web Scraper/Database/API",
         "projecturl": "https://github.com/jaysnel/fbi-missing-person-db",
-        "originalurl": "",
-        "originalurlname": "",
+        "originalurl": "https://fbi-missing-person-api.herokuapp.com/v1/all",
+        "originalurlname": "View Data",
         "additionalurl": "https://github.com/jaysnel/fbi-missing-person-api",
         "additionalurlname": "API Code",
         "imageurl": "",
         "linkName": "Database Code",
         "tools": ["node.js", "express.js", "google-puppeteer", "mongodb", "azure"],
-        "details": ""
+        "details": "You can view an example of this with the API code or by navigating to a 404 page on my site."
     },
     {
         "id": 2,
