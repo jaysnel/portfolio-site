@@ -11,11 +11,11 @@
           <li>Vue.js<font-awesome-icon :icon="{ prefix: 'fab', iconName: 'vuejs' }"/></li>
           <li>Node.js<font-awesome-icon :icon="{ prefix: 'fab', iconName: 'node' }"/></li>
           <li>React.js</li>
-          <li>MongoDB</li>
-          <li>Sitecore</li>
-          <li>Photoshop</li>
           <li>Tailwind</li>
-          <li>Bootstrap</li>
+          <li>MongoDB</li>
+          <li>Solidity</li>
+          <li>Hardhat</li>
+          <li>Ethers.js</li>
         </ul>
       </div>
   </div>
