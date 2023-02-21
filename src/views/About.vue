@@ -20,8 +20,8 @@
     <div class="about-me-social-icons">
       <span><a href="https://www.linkedin.com/in/jaylansnelson/" title="LinkedIn" target="_blank"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'linkedin' }"/></a></span>
       <span><a href="https://github.com/jaysnel/" title="Github" target="_blank"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'github' }"/></a></span>
-      <span><a href="https://jaylanthedev.medium.com/" title="Blog" target="_blank"><font-awesome-icon :icon="{ prefix: 'fa', iconName: 'pencil-alt' }"/></a></span>
-      <span><a target='_blank' :href='require("../assets/resume/Jaylan-Snelson-web3-engineer.pdf")'>Resume</a></span>
+      <span><a href="https://jsnelson.medium.com/" title="Blog" target="_blank"><font-awesome-icon :icon="{ prefix: 'fa', iconName: 'pencil-alt' }"/></a></span>
+      <span><a target='_blank' :href='require("../assets/resume/Jaylan-Snelson-Engineer.pdf")'>Resume</a></span>
   </div>
   </div>
   </div>
@@ -32,7 +32,7 @@ export default {
   name: "AboutMain",
   data() {
   return {
-    pdfLink: require('../assets/resume/Jaylan-Snelson-Blockchain-Engineer.pdf')
+    pdfLink: require('../assets/resume/Jaylan-Snelson-Engineer.pdf')
   }
 }
 };
